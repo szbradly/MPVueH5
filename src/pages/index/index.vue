@@ -23,6 +23,7 @@
     </form>
 
     <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+    <button @click="jump">去往Vuex示例页面</button>
 
     <div class="all">
         <div class="left">
@@ -63,6 +64,9 @@ export default {
     clickHandle (ev) {
       console.log('clickHandle:', ev)
       // throw {message: 'custom test'}
+    },
+    jump () {
+      this.$router.push({ path: '/counter' })
     }
   },
 
